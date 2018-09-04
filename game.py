@@ -18,6 +18,7 @@ class player:
         self.hp = 0
         self.mp = 0
         self.status_effects = []
+        self.location = 'starting_zone'
 
 
 myPlayer = player()
@@ -47,7 +48,7 @@ def title_screen_selections():
 def title_screen():
     os.system('clear')
     print('###############################################')
-    print('#          Welcome to this Text RPG           #')
+    print('#         Welcome to this Text RPG!           #')
     print('###############################################')
     print(' > Play                                        ')
     print(' > Help                                        ')
@@ -58,10 +59,43 @@ def title_screen():
 
 def help_menu():
     print('###############################################')
-    print('#          Welcome to this Text RPG           #')
+    print('#         Welcome to this Text RPG!           #')
     print('###############################################')
     print('- Use up, down, left and right to move.        ')
     print('- Type your commands                           ')
     print('- Use "look" to inspect something              ')
     print('- Email me if there is a bug.                  ')
     title_screen_selections()
+
+
+#### Game functionality ####
+def start_game():
+    #### map ####
+    """
+    a1 a2...
+    -------------
+    |  |  |  |  | a4
+    -------------
+    |  |  |  |  | b4 ...
+    -------------
+    |  |  |  |  |
+    -------------
+    |  |  |  |  |
+    -------------
+    """
+    ZONENAME= ''
+    DESCRIPTION = 'description'
+    EXAMINATION = 'examination'
+    SOLVED = False
+    UP = 'up', 'north'
+    DOWN = 'down', 'south'
+    LEFT = 'left', 'west'
+    RIGHT = 'right', 'east'
+
+    solved_places = {'a1': False, 'a2': False, 'a3': False, 'a4': False,
+                     'b1': False, 'b2': False, 'b3': False, 'b4': False,
+                     'c1': False, 'c2': False, 'c3': False, 'c4': False,
+                     'd1': False, 'd2': False, 'd3': False, 'd4': False}
+
+    zonemap = {
+    }
