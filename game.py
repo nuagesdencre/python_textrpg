@@ -19,7 +19,7 @@ class Player:
         self.charisma = 0
         self.job = ''
         self.status_effects = []
-        self.location = 'start'
+        self.location = 'b2'
         self.game_over = False
 
 
@@ -102,44 +102,44 @@ solved_places = {'a1': False, 'a2': False, 'a3': False, 'a4': False,
 
 zonemap = {
     'a1': {
-        'ZONENAME': 'start',
+        'ZONENAME': 'home',
         'DESCRIPTION': "This is the town's entrance",
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': '',
-        'DOWN': 'b1',
-        'LEFT': '',
-        'RIGHT': 'a2'
+        UP: '',
+        DOWN: 'b1',
+        LEFT: '',
+        RIGHT: 'a2'
     },
     'a2': {
         'ZONENAME': 'A2',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': '',
-        'DOWN': 'b2',
-        'LEFT': 'a1',
-        'RIGHT': 'a3'
+        UP: '',
+        DOWN: 'b2',
+        LEFT: 'a1',
+        RIGHT: 'a3'
     },
     'a3': {
         'ZONENAME': 'A3',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': '',
-        'DOWN': 'b3',
-        'LEFT': 'a2',
-        'RIGHT': 'a4'
+        UP: '',
+        DOWN: 'b3',
+        LEFT: 'a2',
+        RIGHT: 'a4'
     },
     'a4': {
         'ZONENAME': 'A4',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': '',
-        'DOWN': 'b4',
-        'LEFT': 'a3',
-        'RIGHT': ''
+        UP: '',
+        DOWN: 'b4',
+        LEFT: 'a3',
+        RIGHT: ''
     },
 
     'b1': {
@@ -147,40 +147,40 @@ zonemap = {
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'a1',
-        'DOWN': 'c1',
-        'LEFT': '',
-        'RIGHT': 'b2'
+        UP: 'a1',
+        DOWN: 'c1',
+        LEFT: '',
+        RIGHT: 'b2'
     },
     'b2': {
         'ZONENAME': 'B2',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'a2',
-        'DOWN': 'c2',
-        'LEFT': 'b1',
-        'RIGHT': 'b3'
+        UP: 'a2',
+        DOWN: 'c2',
+        LEFT: 'b1',
+        RIGHT: 'b3'
     },
     'b3': {
         'ZONENAME': 'B3',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'a3',
-        'DOWN': 'c3',
-        'LEFT': 'b2',
-        'RIGHT': 'b4'
+        UP: 'a3',
+        DOWN: 'c3',
+        LEFT: 'b2',
+        RIGHT: 'b4'
     },
     'b4': {
         'ZONENAME': 'B4',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'a4',
-        'DOWN': 'c4',
-        'LEFT': 'b3',
-        'RIGHT': ''
+        UP: 'a4',
+        DOWN: 'c4',
+        LEFT: 'b3',
+        RIGHT: ''
     },
 
     'c1': {
@@ -188,40 +188,40 @@ zonemap = {
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'b1',
-        'DOWN': 'd1',
-        'LEFT': '',
-        'RIGHT': 'c2'
+        UP: 'b1',
+        DOWN: 'd1',
+        LEFT: '',
+        RIGHT: 'c2'
     },
     'c2': {
         'ZONENAME': 'c2',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'b2',
-        'DOWN': 'd2',
-        'LEFT': 'c1',
-        'RIGHT': 'c3'
+        UP: 'b2',
+        DOWN: 'd2',
+        LEFT: 'c1',
+        RIGHT: 'c3'
     },
     'c3': {
         'ZONENAME': 'c3',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'b3',
-        'DOWN': 'd3',
-        'LEFT': 'c2',
-        'RIGHT': 'c4'
+        UP: 'b3',
+        DOWN: 'd3',
+        LEFT: 'c2',
+        RIGHT: 'c4'
     },
     'c4': {
         'ZONENAME': 'c4',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'b4',
-        'DOWN': 'd4',
-        'LEFT': 'c3',
-        'RIGHT': ''
+        UP: 'b4',
+        DOWN: 'd4',
+        LEFT: 'c3',
+        RIGHT: ''
     },
 
     'd1': {
@@ -229,40 +229,40 @@ zonemap = {
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'c1',
-        'DOWN': '',
-        'LEFT': '',
-        'RIGHT': 'd2'
+        UP: 'c1',
+        DOWN: '',
+        LEFT: '',
+        RIGHT: 'd2'
     },
     'd2': {
         'ZONENAME': 'd2',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'c2',
-        'DOWN': '',
-        'LEFT': 'd1',
-        'RIGHT': 'd3'
+        UP: 'c2',
+        DOWN: '',
+        LEFT: 'd1',
+        RIGHT: 'd3'
     },
     'd3': {
         'ZONENAME': 'd3',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'c3',
-        'DOWN': '',
-        'LEFT': 'd2',
-        'RIGHT': 'd4'
+        UP: 'c3',
+        DOWN: '',
+        LEFT: 'd2',
+        RIGHT: 'd4'
     },
     'd4': {
         'ZONENAME': 'd4',
         'DESCRIPTION': 'description',
         'EXAMINATION': 'examination',
         'SOLVED': False,
-        'UP': 'c4',
-        'DOWN': '',
-        'LEFT': 'd3',
-        'RIGHT': ''
+        UP: 'c4',
+        DOWN: '',
+        LEFT: 'd3',
+        RIGHT: ''
     },
 }
 
@@ -298,16 +298,16 @@ def player_move(action):
     ask = 'Where do you want to go exactly?\n'
     dest = input(ask)
     if dest in ['up', 'north']:
-        destination = zonemap[myPlayer.location]['UP']
+        destination = zonemap[myPlayer.location][UP]
         mouvement_handler(destination)
     elif dest in ['left', 'west']:
-        destination = zonemap[myPlayer.location]['LEFT']
+        destination = zonemap[myPlayer.location][LEFT]
         mouvement_handler(destination)
     elif dest in ['right', 'east']:
-        destination = zonemap[myPlayer.location]['RIGHT']
+        destination = zonemap[myPlayer.location][RIGHT]
         mouvement_handler(destination)
     elif dest in ['down', 'south']:
-        destination = zonemap[myPlayer.location]['DOWN']
+        destination = zonemap[myPlayer.location][DOWN]
         mouvement_handler(destination)
 
 
@@ -404,7 +404,7 @@ def setup_game():
     for character in speech4:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.17)
+        time.sleep(0.3)
     os.system('cls')
     print('####################################')
     print('##   The adventure starts now!    ##')
